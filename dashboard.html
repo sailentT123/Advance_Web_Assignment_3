@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/css/all.min.css">
+    
+    <style>
+        :root {
+            --sidebar-bg: #1e2d41;
+            --sidebar-hover: #2c3e50;
+            --accent-orange: #f39c12;
+            --light-blue: #d1e9ff;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background-color: var(--sidebar-bg);
+            color: white;
+            position: fixed;
+            transition: all 0.3s;
+        }
+
+        .sidebar-header {
+            background-color: var(--light-blue);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .sidebar-header img {
+            width: 60px;
+        }
+
+        .nav-link {
+            color: #bdc3c7;
+            padding: 12px 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            transition: 0.2s;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            background-color: var(--sidebar-hover);
+            color: white;
+        }
+
+        .nav-link i {
+            margin-right: 10px;
+            width: 20px;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-left: 250px;
+            width: calc(100% - 250px);
+        }
+
+        /* Header */
+        .top-navbar {
+            background-color: white;
+            border-bottom: 4px solid var(--accent-orange);
+            padding: 10px 20px;
+        }
+
+        /* Stats Cards */
+        .stat-card {
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            background: white;
+            padding: 20px;
+            text-align: center;
+            min-width: 180px;
+            transition: transform 0.2s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: calc(100% - 250px);
+            background: white;
+            border-top: 1px solid #dee2e6;
+            padding: 10px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+
+        /* Profile Dropdown */
+        .profile-section {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <img src="images/suza2.png" alt="Logo">
+            <div class="fw-bold text-dark small mt-1">SUZA</div>
+        </div>
+        <div class="nav flex-column mt-2">
+            <a href="dashboard.html" class="nav-link"><i class="fas fa-chart-line"></i> Dashboard</a>
+            <a href="manage-users.html" class="nav-link active"><i class="fas fa-users-cog"></i> Manage Users</a>
+            <a href="manage-students.html" class="nav-link"><i class="fas fa-user-graduate"></i> Manage Students</a>
+            <a href="manage-courses.html" class="nav-link"><i class="fas fa-book"></i> Manage Courses</a>
+            <a href="manage-results.html" class="nav-link"><i class="fas fa-poll-h"></i> Manage Results</a>
+            <a href="manage-allocation.html" class="nav-link"><i class="fas fa-calendar-alt"></i> Manage Allocations</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <nav class="top-navbar d-flex justify-content-between align-items-center">
+            <button class="btn btn-primary btn-sm"><i class="fas fa-bars"></i></button>
+            
+            <div class="dropdown profile-section">
+                <div class="d-flex align-items-center dropdown-toggle" data-bs-toggle="dropdown">
+                    <span class="me-2 text-dark">Admin Name</span>
+                    <i class="fas fa-user-circle fa-2x text-secondary"></i>
+                </div>
+                <ul class="dropdown-menu dropdown-menu-end shadow">
+                    <li><a class="dropdown-item" href="#"><i class="fas fa-key me-2 text-warning"></i> Change Password</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="fas fa-user-edit me-2 text-info"></i> Change Profile</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item text-danger" href="#"><i class="fas fa-sign-out-alt me-2"></i> Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container-fluid p-4">
+            <h2 class="mb-4">Admin Dashboard</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <p class="text-muted mb-1">Total Courses</p>
+                        <div class="stat-value">0</div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <p class="text-muted mb-1">Total Students</p>
+                        <div class="stat-value">0</div>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+
+        <div class="footer">
+            © 2025 The State University of Zanzibar | Version 1.0.2
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

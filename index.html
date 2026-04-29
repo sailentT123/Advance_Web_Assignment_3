@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management System</title>
+
+    <!-- Bootstrap (Offline or CDN) -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <style>
+        body {
+            height: 100vh;
+            background: linear-gradient(to right, #1c4e6e, #0f2027);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-box {
+            width: 850px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .left-panel {
+            background: #1f1f1f;
+            color: white;
+            padding: 40px;
+        }
+
+        .right-panel {
+            background: #f5f5f5;
+            padding: 40px;
+        }
+
+        .btn-primary {
+            background: #1e63d5;
+        }
+
+        .logo {
+            width: 80px;
+            display: block;
+            margin: 0 auto 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="login-box shadow">
+
+    <div class="row g-0">
+
+        <!-- LEFT PANEL -->
+        <div class="col-md-6 left-panel">
+            <h3>Student Management System</h3>
+            <hr>
+
+            <p>✔ For Academic Staff? <a href="#" class="text-success">Login</a> here using your employee number.</p>
+            <p>✔ For Student <a href="#" class="text-success">Login</a> here using registration Number.</p>
+        </div>
+
+        <!-- RIGHT PANEL -->
+        <div class="col-md-6 right-panel">
+
+            <img src="images/suza2.png" class="logo">
+
+            <form action="dashboard.html">
+
+                <input type="text" class="form-control mb-3" placeholder="Username*" required>
+
+                <input type="password" class="form-control mb-2" placeholder="Password*" required>
+
+                <div class="d-flex justify-content-between mb-3">
+                    <div>
+                        <input type="checkbox"> Remember Me
+                    </div>
+                    <a href="#">Forgot Password?</a>
+                </div>
+
+                <button class="btn btn-primary w-100">SIGN IN</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
